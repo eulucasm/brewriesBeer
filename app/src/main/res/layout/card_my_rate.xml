@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_one"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginBottom="8dp"
+    android:backgroundTint="@color/white"
+    app:cardCornerRadius="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        app:cardCornerRadius="32dp">
+
+        <ImageView
+            android:id="@+id/myCircleRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:contentDescription="@string/yellow_circle_description"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/circle" />
+
+        <TextView
+            android:id="@+id/myInitialBrewery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/initial_name"
+            android:textColor="@color/yellowBees"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/myCircleRate"
+            app:layout_constraintEnd_toEndOf="@+id/myCircleRate"
+            app:layout_constraintStart_toStartOf="@+id/myCircleRate"
+            app:layout_constraintTop_toTopOf="@+id/myCircleRate" />
+
+        <TextView
+            android:id="@+id/myBreweryName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="@string/brewery_text"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@id/myCircleRate"
+            app:layout_constraintTop_toTopOf="@+id/myCircleRate"
+            tools:ignore="NotSibling" />
+
+        <TextView
+            android:id="@+id/myRateNote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:textSize="14sp"
+            android:fontFamily="@font/quicksand_regular"
+            android:text="4,9"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/myCircleRate"
+            app:layout_constraintStart_toEndOf="@id/myCircleRate"
+            app:layout_constraintTop_toBottomOf="@+id/myBreweryName" />
+
+        <RatingBar
+            android:id="@+id/myRateBar"
+            android:layout_width="81dp"
+            android:layout_height="14dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="5dp"
+            android:numStars="5"
+            android:progressTint="#FFC107"
+            android:secondaryProgressTint="#FFEB3B"
+            android:stepSize="0.1"
+            app:layout_constraintTop_toBottomOf="@+id/myBreweryName"
+            app:layout_constraintStart_toEndOf="@+id/myRateNote"
+            app:layout_constraintBottom_toBottomOf="@+id/myCircleRate"
+             />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

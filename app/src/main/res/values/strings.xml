@@ -1,0 +1,62 @@
+<resources>
+    <string name="app_name">BreweryBees</string>
+
+    //Descriptions
+    <string name="icon_description">Icon of a Beer mug</string>
+    <string name="fav_btn_description">A heart as favorite button </string>
+    <string name="share_btn_description">Share button</string>
+    <string name="yellow_circle_description">Yellow circle</string>
+
+    //Strings
+    <string name="welcome">Bem-vindo(a)! \nEncontre as melhores cervejarias</string>
+    <string name="search_view">Buscar cervejaria por cidade</string>
+    <string name="locale">Utilizar meu local</string>
+    <string name="nenhum_termo">Nenhum termo digitado</string>
+    <string name="nenhum_resultado">Nenhum resultado encontrado para a busca</string>
+    <string name="nada_digitado">Nenhum termo digitado</string>
+    <string name="descrição_resultado">Por favor, verifique sua pesquisa e tente novamente para obter resultados.</string>
+    <string name="brewery_avaliation_txt">Avalie a cervejaria A</string>
+    <string name="email">nome@email.com</string>
+    <string name="check_box_remember">Lembrar meu e-mail para futuras avaliações</string>
+    <string name="brinde">Um brinde!</string>
+    <string name="algo_errado">Algo deu errado!</string>
+    <string name="avaliacao_sucesso">Sua avaliação foi\nadicionada com sucesso!</string>
+    <string name="avaliacao_erro">Não foi possivel adicionar sua avaliação.\nTente mais tarde.</string>
+    <string name="brewery_details">Detalhes da Cervejaria</string>
+    <string name="see_in_map"><u>Ver no mapa</u></string>
+    <string name="cervejaria_a">Cervejaria A</string>
+    <string name="tipo">Tipo</string>
+    <string name="brewery_text">Cervejaria A</string>
+    <string name="initial_name">A</string>
+    <string name="opinion_string">Segundo a opinião dos usuários:</string>
+    <string name="results">Resultados</string>
+    <string name="order_by">Ordenar por: </string>
+    <string name="address_details">618 Fifth Avee. San Diego, CA 92101, \nEstados Unidos</string>
+    <string name="inicial_name_details">A</string>
+    <string name="site_cervejaria">www.cervejaria.com.br</string>
+    <string name="avaliation_text">+ 500 avaliações</string>
+    <string name="suas_cervejarias_favoritas">Suas cervejarias favoritas</string>
+    <string name="resultados">10 Resultados</string>
+    <string name="ordenar_por">Ordenar por:</string>
+    <string name="order_by_button">Order by</string>
+    <string name="brewery_btn_name">AVALIAR CERVEJARIA</string>
+    <string name="add_photo_btn">ADICIONAR FOTO</string>
+    <string name="background_photo_description">background gray photo</string>
+    <string name="save_btn">SALVAR</string>
+    <string name="top_ten_string">As 10 Mais Bem Avaliadas</string>
+    <string name="brewery_name">Cervejaria X</string>
+    <string name="favorite_brewery">Cervejarias Favoritas</string>
+    <string name="button_choice">Button Choice</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="rate_breweries">Cervejarias avaliadas</string>
+    <string name="cervejarias_que_voc_avaliou">Cervejarias que você avaliou</string>
+
+    <!-- Strings da sessão cervejarias avaliadas -->
+    <string name="nenhuma_cervejaria_avaliada">Nenhuma cervejaria avaliada</string>
+    <string name="ainda_nao_avaliou">Você ainda não avaliou nenhuma \ncervejaria. Suas cervejarias avaliadas \naparecerão aqui. </string>
+    <string name="cevas_que_avaliou">Cervejarias que você avaliou</string>
+    <string name="informe_seu_email">Informe seu e-mail para consultar as \ncervejarias avaliadas.</string>
+    <string name="lembrar_email">Lembrar meu e-mail para futuras consultas</string>
+    <string name="confirmar">Confirmar</string>
+
+</resources>

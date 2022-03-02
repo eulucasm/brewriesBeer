@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.details.rate.RatingContainerFragment"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/container_in_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:name="com.ciandt.brewerybees.ui.details.rate.RatingModalFragment"
+
+        />
+</androidx.appcompat.widget.LinearLayoutCompat>

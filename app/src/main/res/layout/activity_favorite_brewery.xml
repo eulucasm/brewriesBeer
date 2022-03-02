@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".ui.details.BreweryDetailsActivity"
+    >
+
+
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:adjustViewBounds="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/background"
+        />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/black"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/AppBarOverlay"
+        app:contentInsetStartWithNavigation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:liftOnScroll="true"
+        app:title="@string/favorite_brewery"
+        app:titleTextColor="@color/yellowBees" />
+
+    <ImageButton
+        android:id="@+id/returnButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:src="@drawable/serpe"
+        android:paddingStart="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/toolbar"
+        android:layout_marginTop="21dp"
+        />
+
+    <TextView
+        android:id="@+id/favorite_brewery_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/suas_cervejarias_favoritas"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        android:paddingStart="30dp"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <TextView
+        android:id="@+id/count_results_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/resultados"
+        android:textColor="@color/light_black"
+        android:textSize="16sp"
+        android:paddingStart="30dp"
+        app:layout_constraintTop_toBottomOf="@+id/favorite_brewery_txt"
+        tools:layout_editor_absoluteX="16dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/order_by_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/ordenar_por"
+        android:textColor="@color/light_black"
+        android:textSize="18sp"
+        android:paddingStart="30dp"
+        app:layout_constraintTop_toBottomOf="@+id/count_results_txt"
+        tools:layout_editor_absoluteX="16dp"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/order_by_btn"
+        android:layout_width="24dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="164dp"
+        android:layout_marginTop="140dp"
+        android:background="@color/yellowBees"
+        android:contentDescription="@string/order_by_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/order_by_txt"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/order_by_btn"
+        tools:ignore="MissingConstraints,TouchTargetSizeCheck" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/breweryFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="190dp"
+        android:layout_marginEnd="17dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:name="com.ciandt.brewerybees.ui.details.rate.FavoriteBreweryFragment"
+        tools:listItem="@layout/fragment_favorite_brewery"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
