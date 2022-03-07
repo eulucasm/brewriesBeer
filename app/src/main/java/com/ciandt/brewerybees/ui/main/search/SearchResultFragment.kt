@@ -31,11 +31,22 @@ class SearchResultFragment : Fragment() {
       super.onViewCreated(view, savedInstanceState)
       val bundle = this.arguments
 
+
+
       viewModel.searchListLiveData.observe(this.viewLifecycleOwner) { list ->
+         binding.groupRecycler.visibility = View.VISIBLE
          binding.recyclerSearchResult.adapter = SearchResultAdapter(list)
       }
+
       bundle?.getString("searchCity").toString().apply {
          viewModel.getSearchList(this)
+      }
+
+      viewModel.searchListErrorLiveData.observe(this.viewLifecycleOwner){
+         binding.noResultTxt.visibility = View.VISIBLE
+         binding.noResultMessageTxt.visibility = View.VISIBLE
+         binding.groupRecycler.visibility = View.GONE
+
       }
    }
 

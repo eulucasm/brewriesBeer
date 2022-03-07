@@ -22,10 +22,9 @@ interface BreweryApiServices {
    @GET("/breweries/topTen")
    suspend fun breweriesSearchTopTen(): List<BreweriesModel>
 
-   @Multipart
-   @POST("/breweries/photos/upload")
-   suspend fun breweriesPhotosUpload(
-      @Query(value = "brewery_id", encoded = true) brewery_id: String,
-   ): List<RateModal>
+   @GET("/breweries/{breweryId}")
+   suspend fun breweriesSearchForId(
+      @Path(value= "breweryId", encoded = true) email:String
+   ): BreweriesModel
 
 }

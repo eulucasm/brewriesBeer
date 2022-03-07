@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.ciandt.brewerybees.databinding.FragmentPhotoGaleryBinding
+import com.ciandt.brewerybees.ui.details.rate.PhotoGaleryAdapter
 import com.ciandt.brewerybees.ui.mockdata.fakephotogalery
 
 

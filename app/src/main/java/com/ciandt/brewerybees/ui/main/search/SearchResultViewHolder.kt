@@ -12,7 +12,7 @@ class SearchResultViewHolder(private val binding: CardResultBinding): RecyclerVi
       binding.initialBreweryTxt.text = breweriesModel.name.toString().slice(0..0)
       binding.breweryNameTxt.text = breweriesModel.name.toString()
       binding.rateTxt.text = breweriesModel.average.toString()
-      binding.breweryType.text = breweriesModel.breweryType.toString()
+      binding.breweryType.text = breweriesModel.brewery_type.toString()
       binding.distanceTxt.text = breweriesModel.city.toString()
 
 

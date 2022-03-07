@@ -31,9 +31,16 @@ class MyRateFragment : Fragment() {
       super.onViewCreated(view, savedInstanceState)
       val bundle = this.arguments
 
+      viewModel.searchEmailErrorLiveData.observe(this.viewLifecycleOwner){
+         binding.nenhumaCeva.visibility = View.VISIBLE
+         binding.textNenhumaCeva.visibility = View.VISIBLE
+         binding.groupBreweries.visibility = View.GONE
+      }
+
       viewModel.searchEmailListLiveData.observe(this.viewLifecycleOwner) { list ->
          binding.recyclerSearchResult.adapter = MyRateAdapter(list)
       }
+
       bundle?.getString("inputEmail").toString().run {
          viewModel.getSearchListEmail(this)
       }

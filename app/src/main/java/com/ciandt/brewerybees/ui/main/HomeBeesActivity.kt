@@ -9,6 +9,8 @@ import com.ciandt.brewerybees.R
 import com.ciandt.brewerybees.databinding.ActivityHomeBeesBinding
 import com.ciandt.brewerybees.ui.favorites.FavoriteBreweryActivity
 import androidx.appcompat.widget.SearchView
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
 import com.ciandt.brewerybees.ui.main.search.SearchResultFragment
 import com.ciandt.brewerybees.ui.myAvaliations.MyRateBreweriesActivity
 
@@ -31,22 +33,33 @@ class HomeBeesActivity : AppCompatActivity() {
             viewSearch(query!!)
             return false
          }
-
          override fun onQueryTextChange(newText: String?): Boolean {
-//            binding.searchView.clearFocus()
-//            viewSearch(newText!!)
             return false
          }
+
       })
 
-      binding.ratedButton.setOnClickListener{
+      binding.ratedButton.setOnClickListener {
          val intent = Intent(this, MyRateBreweriesActivity::class.java)
          startActivity(intent)
       }
-
    }
 
-   private fun viewSearch(query: String) {
+
+   fun noSearchError() {
+      val fragmentResult: FragmentManager = supportFragmentManager
+      val noSearchResult: Fragment = NoSearchResultFragment()
+      fragmentResult.beginTransaction().replace(R.id.homeFragment, noSearchResult).commit()
+   }
+
+   fun noResultError() {
+      val fragmentResult: FragmentManager = supportFragmentManager
+      val noResult: Fragment = NoSearchResultFragment()
+      fragmentResult.beginTransaction().replace(R.id.homeFragment, noResult).commit()
+   }
+
+
+   fun viewSearch(query: String) {
       val fragment = SearchResultFragment()
       val bundle = Bundle()
       bundle.putString("searchCity", query)
@@ -56,8 +69,8 @@ class HomeBeesActivity : AppCompatActivity() {
       transaction.commit()
    }
 
-    fun goToFavorites(view: View) {
-        val intent = Intent(this, FavoriteBreweryActivity::class.java)
-        startActivity(intent)
-    }
+   fun goToFavorites(view: View) {
+      val intent = Intent(this, FavoriteBreweryActivity::class.java)
+      startActivity(intent)
+   }
 }

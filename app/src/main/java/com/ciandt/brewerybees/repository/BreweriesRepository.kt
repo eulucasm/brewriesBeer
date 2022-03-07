@@ -7,4 +7,5 @@ interface BreweriesRepository {
    suspend fun breweriesSearch(search: String) : List<BreweriesModel>
    suspend fun myEvaluationsEmail(email: String): List<BreweriesModel>
    suspend fun breweriesSearchTopTen(): List<BreweriesModel>
+   suspend fun breweriesSearchForId(breweryId: String): BreweriesModel
 }

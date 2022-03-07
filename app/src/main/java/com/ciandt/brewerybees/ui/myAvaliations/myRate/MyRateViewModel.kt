@@ -8,14 +8,22 @@ import com.ciandt.brewerybees.model.BreweriesModel
 import com.ciandt.brewerybees.repository.BreweriesRepository
 import kotlinx.coroutines.launch
 
-class MyRateViewModel(private val breweriesRepository: BreweriesRepository): ViewModel() {
+class MyRateViewModel(private val breweriesRepository: BreweriesRepository) : ViewModel() {
+
+   private val _searchEmailErrorLiveData = MutableLiveData<Unit>()
+   val searchEmailErrorLiveData: LiveData<Unit> get() = _searchEmailErrorLiveData
 
    private val _searchEmailListLiveData = MutableLiveData<List<BreweriesModel>>()
-   val searchEmailListLiveData: LiveData<List<BreweriesModel>>get() = _searchEmailListLiveData
+   val searchEmailListLiveData: LiveData<List<BreweriesModel>> get() = _searchEmailListLiveData
 
-   fun getSearchListEmail(email: String){
+   fun getSearchListEmail(email: String) {
       viewModelScope.launch {
-         _searchEmailListLiveData.value = breweriesRepository.myEvaluationsEmail(email)
+         val results = breweriesRepository.myEvaluationsEmail(email)
+         if (results.isEmpty()) {
+            _searchEmailErrorLiveData.value = Unit
+         } else {
+            _searchEmailListLiveData.value = results
+         }
       }
    }
 }

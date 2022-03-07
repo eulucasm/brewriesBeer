@@ -14,7 +14,7 @@ class TopDezViewHolder(private val binding: TopTenLayoutBinding) :
    fun bindSearch(breweriesModel: BreweriesModel) = with(binding.root) {
       binding.breweryName.text = breweriesModel.name.toString()
       binding.breweryRate.text = breweriesModel.average.toString()
-      binding.breweryTypeText.text = breweriesModel.breweryType.toString()
+      binding.breweryTypeText.text = breweriesModel.brewery_type.toString()
       binding.breweryDistanceTxt.text = breweriesModel.country
 
       val picasso = Picasso.get()
